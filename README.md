@@ -9,8 +9,8 @@ import threading
 
 Make a function out of your Program which the Threads gona run.
 ```python
-def Hello():
-  print("Hello World!")
+def Google():
+    requests.get("https://www.google.com/")
 ```
 
 You can make the user choose how many threads he wants have to be run or set it in the Sript into the variable `threads`.
@@ -22,21 +22,21 @@ Second we make that the Threads not gona start while the Programm runs, the thre
 ```python
 if __name__ == "__main__":
     if threading.active_count() <= threads:
-        threading.Thread(target=Hello).start()
+        threading.Thread(target=Google).start()
 ```
 
 ### Full Tutorial Code
 ```python
 import threading
 
-def Hello():
-  print("Hello World!")
+def Google():
+    requests.get("https://www.google.com/")
 
-threads = 5 or int(input("[?] How many threads? "))  # You can decide which of this methods you use.
+threads = 5 or int(input("[-] How many threads: "))
 
 if __name__ == "__main__":
     if threading.active_count() <= threads:
-        threading.Thread(target=Hello).start()
+        threading.Thread(target=Google).start()
 ```
 
 
