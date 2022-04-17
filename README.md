@@ -2,9 +2,25 @@
 Ever wanted to know how to make your Programm have multiple Threads which run your Code. Here you go. An easy explanation how to integreate multi threading into your application.
 
 ## Tutorial
-When you want set your own chars which should be used then edit the chars varaibel and insert or delete the characters which you want or don't want. AFter you done that you're mready to use the Programm again.
+First import the Threading package.
 ```
 import threading
+```
+
+Second make that the Threads not gona start while the Programm runs, the threads should start at the beginning of the Programm start. The Thread Code is going to be always the last thing in your Script. 
+
+You can make the user choose how many threads he wants have to be run or set it in the Sript into the variable `threads`.
+
+Set the Target of the Thread to your main function which should be run by the Threads.
+```
+def Hello():
+  print("Hello World!")
+
+threads = 5 or int(input("[?] How many threads? "))
+
+if __name__ == "__main__":
+    if threading.active_count() <= threads:
+        threading.Thread(target=Hello).start()
 ```
 
 ## Credits
