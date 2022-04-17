@@ -7,21 +7,38 @@ First import the Threading package.
 import threading
 ```
 
-Second make that the Threads not gona start while the Programm runs, the threads should start at the beginning of the Programm start. The Thread Code is going to be always the last thing in your Script. 
+Make a function out of your Program which the Threads gona run.
+```python
+def Hello():
+  print("Hello World!")
+```
 
 You can make the user choose how many threads he wants have to be run or set it in the Sript into the variable `threads`.
-
-Set the Target of the Thread to your main function which should be run by the Threads.
+```python
+threads = 5 or int(input("[?] How many threads? "))
 ```
+
+Second we make that the Threads not gona start while the Programm runs, the threads should start at the beginning of the Programm start. The Thread Code is going to be always the last thing in your Script. Set the Target of the Thread to your main function which should be run by the Threads.
+```python
+if __name__ == "__main__":
+    if threading.active_count() <= threads:
+        threading.Thread(target=Hello).start()
+```
+
+### Full Tutorial Code
+```python
+import threading
+
 def Hello():
   print("Hello World!")
 
-threads = 5 or int(input("[?] How many threads? "))
+threads = 5 or int(input("[?] How many threads? "))  # You can decide which of this methods you use.
 
 if __name__ == "__main__":
     if threading.active_count() <= threads:
         threading.Thread(target=Hello).start()
 ```
+
 
 ## Credits
 You're not required to credit me in your Programm when you used this Tutorial to integreate multi threading in your Project.
