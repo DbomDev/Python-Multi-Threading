@@ -1,10 +1,10 @@
 import threading
 
-def Hello():
-    print("Hello")
+def Google():
+    requests.get("https://www.google.com/")
 
-threads = int(input("[-] How many threads: "))
+threads = 5 or int(input("[-] How many threads: "))
 
 if __name__ == "__main__":
     if threading.active_count() <= threads:
-        threading.Thread(target=Hello).start()
+        threading.Thread(target=Google).start()
