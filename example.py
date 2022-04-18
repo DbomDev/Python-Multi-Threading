@@ -1,4 +1,4 @@
-import threading
+import threading, requests
 
 def Google():
     requests.get("https://www.google.com/")
