@@ -3,7 +3,7 @@ Ever wanted to know how to make your Programm have multiple Threads which run yo
 
 ## Tutorial
 First import the Threading package.
-```
+```python
 import threading
 ```
 
