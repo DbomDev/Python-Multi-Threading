@@ -4,7 +4,7 @@ Ever wanted to know how to make your Programm have multiple Threads which run yo
 ## Tutorial
 First import the Threading package.
 ```
-import threading, requests
+import threading
 ```
 
 Make a function out of your Program which the Threads gona run.
